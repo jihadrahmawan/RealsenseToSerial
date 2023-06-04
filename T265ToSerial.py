@@ -83,7 +83,7 @@ try:
 
             string_message="{:04d}{:04d}{:04d}{:04d}{:04d}{:04d}".format(int(Roll), int(Pitch), int(Yaw),
                                                                          5000 + int(posX), 5000 + int(posY),  5000 + int(posZ))
-            ser.write(string_message)
+            ser.write(string_message.encode('utf-8'))
             print (string_message)
             #print ("POSX(cm)    = ", posX)
             #print ("POSY(cm)    = ", posY)
