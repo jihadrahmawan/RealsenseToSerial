@@ -8,16 +8,15 @@ dengan Rapsbeery Pi 4, Ubuntu 20.04
 - $ cd ..
 - $ sudo nano t265.sh
 
-isikan:
+- isikan:
+"
 #!/bin/bash
 /home/ubuntu/RealsenseToSerial/T265ToSerial.py
+"
 
-
-	- $ chmod +x t265.sh
-	- $ ./t265.sh
-
-
-	- pastikan sudah ter run dengan baik.
+- $ chmod +x t265.sh
+- $ ./t265.sh
+- pastikan sudah ter run dengan baik.
 	
 
 2. membuat auto run at boot
