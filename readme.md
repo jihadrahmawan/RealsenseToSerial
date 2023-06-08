@@ -23,23 +23,23 @@ dengan Rapsbeery Pi 4, Ubuntu 20.04
 	- $ sudo nano /etc/systemd/system/t265.service
 	- isikan:
 	
-		[Unit]
-		Description=Realsense T265 Service
-		After=multi-user.target
-		StartLimitIntervalSec=0
-		Conflicts=
-		
-		[Service]
-		User=ubuntu
-		EnvironmentFile=
-		ExecStartPre=
-		ExecStart=/home/ubuntu/t265.sh
+		- [Unit]
+		- Description=Realsense T265 Service
+		- After=multi-user.target
+		- StartLimitIntervalSec=0
+		- Conflicts=
+		- 
+		- [Service]
+		- User=ubuntu
+		- EnvironmentFile=
+		- ExecStartPre=
+		- ExecStart=/home/ubuntu/t265.sh
 
-		Restart=on-failure
-		RestartSec=1
+		- Restart=on-failure
+		- RestartSec=1
 
-		[Install]
-		WantedBy=multi-user.targe
+		- [Install]
+		- WantedBy=multi-user.targe
 
 	- $ systemctl start t265
 	- $ systemctl enable t265
