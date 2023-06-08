@@ -10,8 +10,8 @@ dengan Rapsbeery Pi 4, Ubuntu 20.04
 
 - isikan:
 
-	#!/bin/bash
-	/home/ubuntu/RealsenseToSerial/T265ToSerial.py
+	- #!/bin/bash
+	- /home/ubuntu/RealsenseToSerial/T265ToSerial.py
 
 
 - $ chmod +x t265.sh
