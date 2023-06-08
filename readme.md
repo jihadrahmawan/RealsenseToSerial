@@ -2,11 +2,11 @@ Aux Sensor Realsense T265 ke teensy 4.1
 dengan Rapsbeery Pi 4, Ubuntu 20.04
 
 1. Download and run code	
-	$ git clone https://github.com/jihadrahmawan/RealsenseToSerial.git
-	$ cd RealsenseToSerial/
-	$ chmod +x T265ToSerial.py
-	$ cd ..
-	$ sudo nano t265.sh
+	- $ git clone https://github.com/jihadrahmawan/RealsenseToSerial.git
+	- $ cd RealsenseToSerial/
+	- $ chmod +x T265ToSerial.py
+	- $ cd ..
+	- $ sudo nano t265.sh
 
 		isikan:
 		#!/bin/bash 
@@ -18,9 +18,9 @@ dengan Rapsbeery Pi 4, Ubuntu 20.04
 
 		save
 
-	$ chmod +x t265.sh
+	- $ chmod +x t265.sh
 	lalu test dengan:
-	$ ./t265.sh
+	- $ ./t265.sh
 	pastikan sudah ter run dengan baik.
 	
 
