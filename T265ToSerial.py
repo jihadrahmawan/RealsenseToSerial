@@ -19,7 +19,7 @@ H_aeroRef_T265Ref   = np.array([[0,0,-1,0],[1,0,0,0],[0,-1,0,0],[0,0,0,1]])
 H_T265body_aeroBody = np.linalg.inv(H_aeroRef_T265Ref)
 
 
-body_offset_x = 10 #cm
+body_offset_x = -10 #cm
 body_offset_y = 0  
 body_offset_z = 0  
 scale_factor = 100.0
@@ -30,8 +30,20 @@ cfg = rs.config()
 cfg.enable_stream(rs.stream.pose)
 
 # Start streaming with requested config
-pipe.start(cfg)
-ser = serial.Serial('/dev/ttyTHS1', baudrate = 115200,bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE)
+attempts = 0
+success = False
+
+while attempts < 50 and not success:
+    try:
+        pipe.start(cfg)
+        success = True
+    except:
+    	print ("Replug and PLug realsense camera, Trying to connect...")
+    	attempts += 1
+    	if attempts == 50:
+    		break
+
+ser = serial.Serial('/dev/ttyAMA0', baudrate = 115200,bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE)
 try:
     #
     while (True):
@@ -69,7 +81,7 @@ try:
                                                                          (5000 + int(posX)), (5000 + int(posY)),  (5000 + int(posZ)))
             ser.write(string_message.encode('utf-8'))
             print (string_message)
-            time.sleep(.01)
+            time.sleep(.1)
 
         
 finally:
