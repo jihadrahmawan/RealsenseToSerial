@@ -8,15 +8,10 @@ dengan Rapsbeery Pi 4, Ubuntu 20.04
 	- $ cd ..
 	- $ sudo nano t265.sh
 
-		isikan:
-		#!/bin/bash 
-		# This is /usr/bin/your_config-start.sh 
-		# # do all your commands here... script terminates when all is done. 
+	isikan:
+	#!/bin/bash 
+	/home/ubuntu/RealsenseToSerial/T265ToSerial.py
 
-		# Change the path to t265_to_mavlink.py
-		/home/ubuntu/RealsenseToSerial/T265ToSerial.py
-
-		save
 
 	- $ chmod +x t265.sh
 	- $ ./t265.sh
