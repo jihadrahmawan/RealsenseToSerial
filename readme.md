@@ -19,14 +19,15 @@ dengan Rapsbeery Pi 4, Ubuntu 20.04
 		save
 
 	- $ chmod +x t265.sh
-	lalu test dengan:
 	- $ ./t265.sh
-	pastikan sudah ter run dengan baik.
+
+
+	- pastikan sudah ter run dengan baik.
 	
 
 2. membuat auto run at boot
-	$ sudo nano /etc/systemd/system/t265.service
-	isikan:
+	- $ sudo nano /etc/systemd/system/t265.service
+	- isikan:
 [Unit]
 Description=Realsense T265 Service
 After=multi-user.target
